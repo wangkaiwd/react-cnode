@@ -46,6 +46,7 @@
     "flexible.js": "^2.0.19",
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
-    "react-dom": "^16.3.2"
+    "react-dom": "^16.3.2",
+    "react-sticky": "^6.0.2"
   }
 }

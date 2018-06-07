@@ -1,25 +1,21 @@
-import { Carousel, WingBlank } from 'antd-mobile';
-import { fetchTopicIndex } from '@/http/api'
-class App extends React.Component {
-  constructor(props) {
-    super();
-    this.state = {
+import React, { Component } from 'react';
+import Title from '@/components/layout/title'
+import List from '@/components/list'
+import Footer from '@/components/layout/footer'
 
-    }
-  }
-
-  componentDidMount() {
-    fetchTopicIndex({ page: 10, tab: 'ask', limit: 10 }, res => {
-      console.log(res);
-    });
-  }
+class App extends Component {
   render() {
     return (
       <div>
-        App
+        <Title
+          name="首页"
+        />
+        <div className="category" style={{ marginTop: '100px' }}>
+          {this.props.children}
+        </div>
       </div>
     );
   }
 }
 
-export default App
+export default App;
