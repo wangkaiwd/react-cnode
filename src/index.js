@@ -1,10 +1,10 @@
 import ReactDOM from "react-dom";
 import { Router, hashHistory } from 'react-router'
 import routeConfig from '@/route/routes'
-import flexible from 'flexible.js'
-flexible();
+// import flexible from 'flexible.js'
+// flexible();
 const render = component => {
-  ReactDOM.render(<Router routes={routeConfig} history={hashHistory} />, document.getElementById("app"));
+  ReactDOM.render(<Router routes={component} history={hashHistory} />, document.getElementById("app"));
 }
 
 render(routeConfig)

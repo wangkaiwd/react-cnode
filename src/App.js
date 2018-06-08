@@ -10,7 +10,7 @@ class App extends Component {
         <Title
           name="首页"
         />
-        <div className="category" style={{ marginTop: '100px' }}>
+        <div className="category">
           {this.props.children}
         </div>
       </div>

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { TabBar } from 'antd-mobile'
 import List from '../list'
 import TopTabs from './topTabs'
+import './footer.less'
 const tabConfig = [
   { title: '全部', content: 'tab1', component: List },
   { title: '精华', content: 'tab2' },
@@ -9,7 +10,22 @@ const tabConfig = [
   { title: '问答', content: 'tab4' },
   { title: '招聘', content: 'tab5' }
 ]
-class TabBarExample extends Component {
+const style = {
+  iconStyle: {
+    width: '22px',
+    height: '22px',
+    background: 'url(https://zos.alipayobjects.com/rmsportal/sifuoDUQdAFKAVcFGROC.svg) center center /  21px 21px no-repeat'
+  },
+  selectedIconStyle: {
+    width: '22px',
+    height: '22px',
+    background: 'url(https://zos.alipayobjects.com/rmsportal/iSrlOTqrKddqbOmlvUfq.svg) center center /  21px 21px no-repeat'
+  }
+}
+const topTabsConfig = [
+  {},
+]
+class Footer extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -21,17 +37,6 @@ class TabBarExample extends Component {
   renderContent(pageText) {
     return (
       <div style={{ backgroundColor: 'white', height: '100%', textAlign: 'center' }}>
-        {/* <div style={{ paddingTop: 60 }}>Clicked “{pageText}” tab， show “{pageText}” information</div>
-        <a style={{ display: 'block', marginTop: 40, marginBottom: 20, color: '#108ee9' }}
-          onClick={(e) => {
-            e.preventDefault();
-            this.setState({
-              hidden: !this.state.hidden,
-            });
-          }}
-        >
-          Click to show/hide tab-bar
-        </a> */}
         {pageText}
       </div>
     );
@@ -39,7 +44,7 @@ class TabBarExample extends Component {
 
   render() {
     return (
-      <div style={{ position: 'fixed', height: '100%', width: '100%', top: 0 }}>
+      <div className="footer">
         <TabBar
           unselectedTintColor="#949494"
           tintColor="#33A3F4"
@@ -155,4 +160,4 @@ class TabBarExample extends Component {
     );
   }
 }
-export default TabBarExample;
+export default Footer;
